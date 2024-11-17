@@ -1,0 +1,44 @@
+html { box-sizing: border-box; }
+*, ::before, ::after { box-sizing: inherit; }
+
+$color-primary: #8B4513;
+$color-secondary: #F5F5DC;
+$color-accent: #6B8E23;
+$color-text: #333333;
+
+$font-headline: "Montserrat", sans-serif;
+$font-text: "Lato", sans-serif;
+
+body {
+  margin: 0;
+  font-family: $font-text;
+  color: $color-text;
+}
+
+.menu {
+  font-family: $font-headline;
+  background-color: $color-primary;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+}
+
+.menu__items {
+  display: flex;
+  list-style: none;
+
+  & a {
+    text-decoration: none;
+    color: white;
+  }
+}
+
+
+.logo {
+  display: flex;
+}
+
+.footer {
+  background-color: $color-primary;
+  color: white;
+}

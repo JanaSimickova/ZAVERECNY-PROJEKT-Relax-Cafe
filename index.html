@@ -1,35 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Relax Café</title>
-  <link rel="stylesheet" href="CSS/style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-</head>
-<body>
-  <header>
-    <div class="menu">
-      <div class="logo">
-        <img class="logo__image" src="images/Logo-Coffee.svg" alt="Logo">
-        <p class="logo__name">Café Relax</p>
-      </div>
-      <div>
-        <ul class="menu__items">
-          <li class="menu__about-us"><a href="#about-us">O nás</a></li>
-          <li class="menu__gallery"><a href="">Galerie</a></li>
-          <li class="menu__offer"><a href="">Nabídka</a></li>
-          <li class="menu__resevation"><a href="">Rezervace</a></li>
-          <li class="menu__contact"><a href="">Kontakt</a></li>
-        </ul>
-      </div>
-    </div>
-  </header>
+---
+layout: main-template.njk
+---
 
-  <div class="foto">
-    <img src="images/capuccino-big.jpg" alt="Úvodní fotografie s kávou">
+
+  <div class="photo">
+    <img class="photo__image" src="/images/capuccino-big.jpg" alt="Úvodní fotografie s kávou">
   </div>
 
   <section id="about-us" class="about-us">
@@ -37,8 +12,8 @@
     <p>Vítejte v naší útulné kavárně, kde se čas zastaví a každá chvilka se promění v malý svátek. Naše menu nabízí nejen vynikající kávu, ale také lahodné zákusky, které potěší vaše chuťové pohárky. Chcete-li si dopřát víc, vyzkoušejte náš brunch plný čerstvých surovin a kreativních kombinací. U nás najdete klidné místo, kde si můžete užít čas s přáteli nebo se prostě jen tak zasnít. Těšíme se na vaši návštěvu!</p>
   </section>
 
-  <div class="foto">
-    <img src="images/cafe-big.jpg" alt="Fotografie kavárny">
+  <div class="photo">
+    <img class="photo__image photo__image--main" src="/images/cafe-big.jpg" alt="Fotografie kavárny">
   </div>
 
   <section>
@@ -59,11 +34,3 @@
       <p>Dopoledne podáváme vydatné sladké i slané snídaně</p>
     </div>
   </section>
-
-  <footer class="footer">
-    <a href=""><img src="images/Facebook Icon.svg" alt="Facebook"></a>
-    <img src="images/IG-icon.svg" alt="Instagram">
-    <p>Relax Café, Kobližná 123, 602 00 Brno</p>
-  </footer>
-</body>
-</html>

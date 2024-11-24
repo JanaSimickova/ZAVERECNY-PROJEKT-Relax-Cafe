@@ -1,0 +1,38 @@
+---
+layout: main-template.njk
+---
+
+<h1>Rezervujte si u nás stůl</h1>
+
+<p>Rezervaci můžete provést buď telefonicky na telefonním čísle +420 123 456 789 
+  nebo prostřednictvím rezervačního formuláře níže.</p>
+
+<p>Po odeslání formuláře Vám na e-mail potvrdíme vytvoření rezervace a následně Vám rezervaci do 24h potvrdíme.</p>
+
+<h2>Rezervační formulář</h2>
+
+<form action="" method="post">
+
+  <label for="name">Jméno</label>
+  <input type="text" name="name" id="name" placeholder="Zadejte Vaše jméno">
+
+  <label for="surname">Příjmení</label>
+  <input type="text" name="surname" id="surname" placeholder="Zadejte Vaše příjmení">
+
+  <label for="email">E-mail</label>
+  <input type="email" name="email" id="email" placeholder="Zadejte Váš e-mail">
+
+  <label for="number">Počet osob</label>
+  <input type="number" name="number" id="number" placeholder="Zadejte počet osob">
+
+  <label for="date">Zvolte datum a čas</label>
+  <input type="datetime-local" name="date" id="date">
+
+  <label for="note">Poznámka</label>
+  <input type="text" name="note" id="note" placeholder="Zde můžete zadat další požadavky nebo přání">
+
+  <input type="checkbox" name="consent" id="consent">
+  <label for="consent">Souhlasím se zpracováním osobních údajů.</label>
+
+  <button type="submit">Odeslat</button>
+</form>

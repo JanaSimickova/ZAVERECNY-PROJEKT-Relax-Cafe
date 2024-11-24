@@ -1,10 +1,10 @@
 html { box-sizing: border-box; }
 *, ::before, ::after { box-sizing: inherit; }
 
-$color-primary: #8B4513;
-$color-secondary: #F5F5DC;
-$color-accent: #6B8E23;
-$color-text: #333333;
+$color-primary: #633E1A;
+$color-secondary: #fff2e4;
+$color-accent: #6D8190;
+$color-text: #2E271A;
 
 $font-headline: "Montserrat", sans-serif;
 $font-text: "Lato", sans-serif;
@@ -12,8 +12,20 @@ $font-text: "Lato", sans-serif;
 body {
   margin: 0;
   font-family: $font-text;
+  font-size: 16px;
   color: $color-text;
+  background-color: $color-secondary;
 }
+
+.main {
+  max-width: 1200px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+// header {
+//   position: fixed;
+// }
 
 .menu {
   font-family: $font-headline;
@@ -21,21 +33,57 @@ body {
   color: white;
   display: flex;
   justify-content: space-between;
+  padding: 20px;
+    width: 100%;
+  max-width: 1200px;
+  height: 100px;
+  margin: 0 auto;
 }
 
 .menu__items {
   display: flex;
   list-style: none;
+  padding: 0;
 
   & a {
     text-decoration: none;
-    color: white;
+    color: #ffffff;
+    padding: 10px;
+    font-weight: 700;
+
+    &:hover {
+      color: $color-primary;
+      background-color: $color-secondary;
+    }
   }
 }
 
 
 .logo {
   display: flex;
+  align-items: center;
+
+  &__image {
+    width: 2em;
+    height: 2em;
+  }
+
+  &__name {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    margin-left: 10px;
+    font-size: 20px;
+  }
+}
+
+.photo__image {
+  width: 100%;
+
+  &--main {
+    margin-top: 100px;
+    height: 100vh;
+  }
 }
 
 .footer {

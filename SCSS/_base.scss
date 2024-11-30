@@ -1,0 +1,19 @@
+@use "variables";
+
+html { box-sizing: border-box; }
+*, ::before, ::after { box-sizing: inherit; }
+
+body {
+  margin: 0;
+  font-family: variables.$font-text;
+  font-size: 16px;
+  color: variables.$color-text;
+  background-color: variables.$color-secondary;
+}
+
+.main {
+  max-width: 1200px;
+  text-align: center;
+  margin: 0 auto;
+}
+

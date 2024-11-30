@@ -1,0 +1,89 @@
+@use "variables";
+
+.menu {
+  font-family: variables.$font-headline;
+  background-color: variables.$color-primary;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0 auto;
+  position: fixed;
+}
+
+.menu__items {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  & a {
+    text-decoration: none;
+    color: #ffffff;
+    padding: 10px 20px;
+    font-weight: 700;
+    display: inline-block;
+
+    &:hover {
+      color: variables.$color-primary;
+      background-color: variables.$color-secondary;
+    }
+  }
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  margin: 20px;
+
+  &__image {
+    width: 2em;
+    height: 2em;
+  }
+
+  &__name {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    margin-left: 10px;
+    font-size: 20px;
+  }
+}
+
+@media screen and (min-width: 640px) {
+  
+}
+
+@media screen and (min-width: 1200px) {
+  .menu {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .menu__items {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  
+    & a {
+      padding: 30px 20px;
+        
+     }
+  }
+
+  .logo {
+   
+    &__image {
+      width: 2em;
+      height: 2em;
+    }
+  
+    &__name {
+      margin-left: 10px;
+      font-size: 20px;
+    }
+  }
+}

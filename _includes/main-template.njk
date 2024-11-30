@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Relax Café</title>
   <link rel="stylesheet" href="/CSS/style.min.css">
+  <link rel="stylesheet" href="/CSS/glide.core.min.css">
+  <link rel="stylesheet" href="/CSS/glide.theme.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -22,7 +24,7 @@
         </svg>
         <a class="logo__name" href="/">Relax Café</a>
       </div>
-      <div>
+      <nav>
         <ul class="menu__items">
           <li class="menu__about-us"><a href="/#about-us">O nás</a></li>
           <li class="menu__gallery"><a href="/galerie/">Galerie</a></li>
@@ -30,7 +32,7 @@
           <li class="menu__reservation"><a href="/rezervace/">Rezervace</a></li>
           <li class="menu__contact"><a href="/kontakt/">Kontakt</a></li>
         </ul>
-      </div>
+      </nav>
     </div>
   </header>
 
@@ -41,10 +43,21 @@
   </div>
 
   <footer class="footer">
-    <a href=""><img src="/images/Facebook Icon.svg" alt="Facebook"></a>
-    <img src="/images/IG-icon.svg" alt="Instagram">
-    <p>Relax Café, Kobližná 123, 602 00 Brno</p>
+    <div class="footer__links">
+      <a class="footer__fb" href="https://www.facebook.com/"><img class="footer__image" src="/images/Facebook Icon.svg" alt="Facebook"></a>
+      <a class="footer__ig" href="https://www.instagram.com/"><img class="footer__image" src="/images/IG-icon.svg" alt="Instagram"></a>
+    </div>
+    <p class="footer__address">Relax Café, Kobližná 123, 602 00 Brno</p>
   </footer>
+
+<script src="/JS/glide.min.js"></script>
+
+<script>
+  new Glide('.glide', {
+    type: "carousel",
+    autoplay: 2000
+  }).mount()
+</script>
 
 </body>
 </html>

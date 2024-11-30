@@ -2,35 +2,49 @@
 layout: main-template.njk
 ---
 
-
-  <div class="photo">
-    <img class="photo__image" src="/images/capuccino-big.jpg" alt="Úvodní fotografie s kávou">
+<div class="glide">
+  <div class="glide__track" data-glide-el="track">
+    <ul class="glide__slides">
+      <li class="glide__slide"><img class="photo photo__image photo__image--main" src="/images/capuccino-big.jpg" alt="Úvodní fotografie s kávou"></li>
+      <li class="glide__slide"><img class="photo photo__image photo__image--main" src="/images/pancakes-big.jpg" alt="Fotografie palačinek"></li>
+      <li class="glide__slide"><img class="photo photo__image photo__image--main" src="/images/brunch-big.jpg" alt="Fotografie snídaně"></li>
+    </ul>
   </div>
+  <div class="glide__bullets" data-glide-el="controls[nav]">
+    <button class="glide__bullet" data-glide-dir="=0"></button>
+    <button class="glide__bullet" data-glide-dir="=1"></button>
+    <button class="glide__bullet" data-glide-dir="=2"></button>
+  </div>
+</div>
 
-  <section id="about-us" class="about-us">
+  <section id="about-us" class="section section__about-us">
     <h2>O naší kavárně</h2>
     <p>Vítejte v naší útulné kavárně, kde se čas zastaví a každá chvilka se promění v malý svátek. Naše menu nabízí nejen vynikající kávu, ale také lahodné zákusky, které potěší vaše chuťové pohárky. Chcete-li si dopřát víc, vyzkoušejte náš brunch plný čerstvých surovin a kreativních kombinací. U nás najdete klidné místo, kde si můžete užít čas s přáteli nebo se prostě jen tak zasnít. Těšíme se na vaši návštěvu!</p>
   </section>
 
-  <div class="photo">
-    <img class="photo__image photo__image--main" src="/images/cafe-big.jpg" alt="Fotografie kavárny">
-  </div>
+  <img class="photo photo__image photo__image--cafe" src="/images/cafe-big.jpg" alt="Fotografie kavárny">
 
-  <section>
+  <section class="section section__offer">
     <h2>Na čem si u nás pochutnáte</h2>
-    <div>
-      <img src="" alt="">
-      <h3>Nápoje</h3>
-      <p>Kávu připravujeme z výběrových zrn z brněnské pražírny Fiftybeans a čokoládu máme z Čokoládovny Janek</p>
-    </div>
-    <div>
-      <img src="" alt="">
-      <h3>Zákusky</h3>
-      <p>Zákusky máme vlastní výroby a na Cheesecaky se můžete těšit od Sorry - pečeme jinak</p>
-    </div>
-    <div>
-      <img src="" alt="">
-      <h3>Snídaně</h3>
-      <p>Dopoledne podáváme vydatné sladké i slané snídaně</p>
-    </div>
+    <article class="card">
+      <img class="card__image" src="/images/coffee4.jpg" alt="Kávy">
+      <div class="card__text">
+        <h3 class="card__title">Nápoje</h3>
+        <p class="card__description">Kávu připravujeme z výběrových zrn z brněnské pražírny Fiftybeans a čokoládu máme z Čokoládovny Janek</p>
+      </div>
+    </article>
+    <article class="card">
+      <img class="card__image" src="/images/cake6.jpg" alt="Zákusky">
+      <div class="card__text">
+        <h3 class="card__title">Zákusky</h3>
+        <p class="card__description">Zákusky máme vlastní výroby a na Cheesecaky se můžete těšit od Sorry - pečeme jinak</p>
+      </div>
+    </article>
+    <article class="card">
+      <img class="card__image" src="/images/pancakes.jpg" alt="Snídaně">
+      <div class="card__text">
+        <h3 class="card__title">Snídaně</h3>
+        <p class="card__description">Dopoledne podáváme vydatné sladké i slané snídaně</p>
+      </div>
+    </article>
   </section>

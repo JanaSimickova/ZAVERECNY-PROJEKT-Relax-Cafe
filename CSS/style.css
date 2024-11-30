@@ -26,23 +26,24 @@ body {
   color: white;
   display: flex;
   justify-content: space-between;
-  padding: 20px;
   width: 100%;
-  max-width: 1200px;
-  height: 100px;
   margin: 0 auto;
+  position: fixed;
 }
 
 .menu__items {
   display: flex;
+  flex-direction: column;
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 .menu__items a {
   text-decoration: none;
   color: #ffffff;
-  padding: 10px;
+  padding: 10px 20px;
   font-weight: 700;
+  display: inline-block;
 }
 .menu__items a:hover {
   color: #633E1A;
@@ -52,6 +53,7 @@ body {
 .logo {
   display: flex;
   align-items: center;
+  margin: 20px;
 }
 .logo__image {
   width: 2em;
@@ -65,15 +67,99 @@ body {
   font-size: 20px;
 }
 
+@media screen and (min-width: 1200px) {
+  .menu {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .menu__items {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .menu__items a {
+    padding: 30px 20px;
+  }
+  .logo__image {
+    width: 2em;
+    height: 2em;
+  }
+  .logo__name {
+    margin-left: 10px;
+    font-size: 20px;
+  }
+}
 .photo__image {
   width: 100%;
 }
 .photo__image--main {
-  margin-top: 100px;
-  height: 100vh;
+  margin-top: 190px;
+}
+
+.section {
+  padding: 20px;
+}
+
+.card {
+  width: 80%;
+  margin: 20px auto;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: grey 2px 2px 20px;
+}
+.card__image {
+  width: 100%;
+  height: 150px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px 10px 0 0;
+}
+.card__text {
+  padding: 20px;
+}
+.card__title {
+  margin: 0 0 16px 0;
+}
+.card__description {
+  margin: 0;
 }
 
 .footer {
   background-color: #633E1A;
   color: white;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  padding: 20px;
+}
+
+.footer__image {
+  width: 2em;
+  margin-right: 10px;
+}
+
+.footer__address {
+  margin: 0 0 20px 0;
+  font-weight: 700;
+}
+
+@media screen and (min-width: 1200px) {
+  .footer {
+    background-color: #633E1A;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+  }
+  .footer__image {
+    width: 2em;
+    margin-right: 10px;
+  }
+  .footer__address {
+    margin: 0;
+    font-weight: 700;
+  }
 }/*# sourceMappingURL=style.css.map */

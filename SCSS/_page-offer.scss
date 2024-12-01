@@ -1,0 +1,45 @@
+@use "variables";
+
+.heading__offer {
+  background-image: url(/images/chocolate-big.jpg);
+}
+
+.offer {
+  padding: 20px 40px;
+  text-align: left;
+  
+  &:nth-child(2n+1) {
+    background-color: white;
+  }
+  &__title {
+    margin: 0 0 20px 0;
+    text-align: center;
+  }
+
+  &__table {
+    display: grid;
+    grid-template-columns: 80% 20%;
+  }
+
+  &__item {
+    padding-bottom: 5px;
+    border-bottom: 1px solid variables.$color-primary;
+  }
+
+  &__price {
+    text-align: right;
+    padding-bottom: 5px;
+    border-bottom: 1px solid variables.$color-primary;
+  }
+}
+
+@media screen and (min-width: 640px) {
+  .offer {
+    padding: 40px 120px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .offer {
+    padding: 40px 240px;
+  }
+}

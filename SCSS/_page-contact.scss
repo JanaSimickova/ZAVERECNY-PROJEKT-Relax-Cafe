@@ -1,0 +1,23 @@
+@use "variables";
+
+.heading__contact {
+  background-image: url(/images/pancakes-big.jpg);
+}
+
+.contact {
+  padding: 20px 40px;
+
+  &__cafe {
+    display: grid;
+    grid-template-columns: 20% 80%;
+  }
+
+  &__title {
+    grid-column: span 2;
+  }
+
+  &__image {
+    grid-row: span 2;
+  }
+}
+

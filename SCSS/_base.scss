@@ -8,12 +8,14 @@ body {
   font-family: variables.$font-text;
   font-size: 16px;
   color: variables.$color-text;
-  background-color: variables.$color-secondary;
+  background-color: #FAFAFA;
 }
 
 .main {
   max-width: 1200px;
   text-align: center;
   margin: 0 auto;
+  background-color: variables.$color-secondary;
+  box-shadow: grey 2px 2px 20px;
 }
 

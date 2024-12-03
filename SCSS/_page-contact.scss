@@ -1,23 +1,69 @@
 @use "variables";
 
 .heading__contact {
-  background-image: url(/images/pancakes-big.jpg);
+  background-image: url(/images/croissant-big.jpg);
 }
 
 .contact {
-  padding: 20px 40px;
-
-  &__cafe {
-    display: grid;
-    grid-template-columns: 20% 80%;
+  &__cafe,
+  &__official {
+    margin: 0 40px;
   }
 
   &__title {
-    grid-column: span 2;
+    text-align: left;
+    margin: 20px 0;
+  }
+  &__item {
+    display: flex;
   }
 
   &__image {
-    grid-row: span 2;
+    width: 30px;
+  }
+
+  &__text {
+    margin-left: 20px;
+    text-align: left;
+  }
+
+  &__text p {
+    margin: 10px 0;
   }
 }
 
+@media screen and (min-width: 640px) {
+  .contact {
+    display: flex;
+
+    &__cafe,
+    &__official {
+      flex-basis: 50%;
+    }
+
+    &__title {
+      text-align: center;
+    }
+
+    &__item {
+      margin: 0 auto;
+      width: 75%;
+    }
+
+    &__image {
+      width: 40px;
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .contact {
+    &__cafe {
+      margin-left: 200px;
+    }
+
+    &__official {
+      margin-right: 200px;
+    }
+  }
+}

@@ -321,6 +321,10 @@ body {
   margin: 10px 0;
 }
 
+.map {
+  width: 100%;
+}
+
 @media screen and (min-width: 640px) {
   .contact {
     display: flex;

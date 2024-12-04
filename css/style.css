@@ -28,25 +28,43 @@ body {
   color: white;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   width: 100%;
   margin: 0 auto;
   position: fixed;
   z-index: 1;
 }
-
-.menu__items {
+.menu__nav {
   display: flex;
   flex-direction: column;
+  align-items: end;
+}
+.menu__hamburger {
+  font-weight: bold;
+  margin: 20px;
+  cursor: pointer;
+  width: 24px;
+}
+
+.menu__items {
+  background-color: #633E1A;
   list-style: none;
   padding: 0;
   margin: 0;
+}
+.menu__items--hide {
+  display: none;
+}
+.menu__items--show {
+  display: block;
 }
 .menu__items a {
   text-decoration: none;
   color: #ffffff;
   padding: 10px 20px;
   font-weight: 700;
-  display: inline-block;
+  display: block;
+  width: 150px;
 }
 .menu__items a:hover {
   color: #633E1A;
@@ -71,16 +89,19 @@ body {
 }
 
 @media screen and (min-width: 640px) {
+  .menu__hamburger {
+    display: none;
+  }
   .menu__items {
+    display: flex;
     flex-direction: row;
     align-items: center;
-    list-style: none;
-    padding: 0;
-    margin: 0;
   }
   .menu__items a {
     padding: 30px 10px;
     text-align: center;
+    width: -moz-fit-content;
+    width: fit-content;
   }
   .menu__contact a {
     margin-right: 10px;
@@ -118,7 +139,7 @@ body {
   width: 100%;
 }
 .photo__image--main {
-  margin-top: 190px;
+  margin-top: 72px;
 }
 
 .section {
@@ -129,6 +150,14 @@ body {
 }
 .section__description {
   margin: 0;
+}
+
+.box {
+  height: 500px;
+  margin: 50px 0;
+  background-image: url(/images/cafe-big.jpg);
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 .card {
@@ -296,12 +325,44 @@ body {
   background-image: url(/images/cheesecake-big.jpg);
 }
 
+.reservation__text {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 40px;
+}
+
+.form {
+  width: 100%;
+  max-width: 300px;
+}
+
+.form__field {
+  margin-bottom: 10px;
+}
+.form__field > label {
+  display: block;
+  font-size: 14px;
+  text-align: left;
+}
+.form__field input[type=text], .form__field input[type=email], .form__field input[type=number], .form__field input[type=datetime-local], .form__field textarea {
+  width: 100%;
+  border: 1px solid #633E1A;
+  border-radius: 4px;
+  font-size: 16px;
+  padding: 5px;
+  background-color: white;
+}
+
 .heading__contact {
   background-image: url(/images/croissant-big.jpg);
 }
 
+.contact {
+  display: grid;
+  grid-template-columns: 10% 80% 10%;
+}
 .contact__cafe, .contact__official {
-  margin: 0 40px;
+  grid-column: 2;
 }
 .contact__title {
   text-align: left;
@@ -323,32 +384,33 @@ body {
 
 .map {
   width: 100%;
+  margin-bottom: -4px;
 }
 
 @media screen and (min-width: 640px) {
   .contact {
-    display: flex;
+    display: grid;
+    grid-template-columns: 10% 35% 10% 35% 10%;
   }
   .contact__cafe, .contact__official {
-    flex-basis: 50%;
+    margin: 0;
+  }
+  .contact__cafe {
+    grid-column: 2;
+  }
+  .contact__official {
+    grid-column: 4;
   }
   .contact__title {
     text-align: center;
-  }
-  .contact__item {
-    margin: 0 auto;
-    width: 75%;
   }
   .contact__image {
     width: 40px;
   }
 }
 @media screen and (min-width: 1200px) {
-  .contact__cafe {
-    margin-left: 200px;
-  }
-  .contact__official {
-    margin-right: 200px;
+  .contact {
+    grid-template-columns: 15% 25% 20% 25% 15%;
   }
 }
 .footer {

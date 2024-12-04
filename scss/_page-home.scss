@@ -2,7 +2,7 @@
   width: 100%;
 
   &--main {
-    margin-top: 190px;
+    margin-top: 72px;
   }
 
   // &--cafe {
@@ -21,6 +21,14 @@
   &__description {
     margin: 0;
   }
+}
+
+.box {
+  height: 500px;
+	margin: 50px 0;
+	background-image: url(/images/cafe-big.jpg);
+	background-size: cover;
+	background-attachment: fixed;
 }
 
 .card {

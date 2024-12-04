@@ -6,25 +6,49 @@
   color: white;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   width: 100%;
   margin: 0 auto;
   position: fixed;
   z-index: 1;
+
+  &__nav {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+  }
+
+  &__hamburger {
+    font-weight: bold;
+    margin: 20px;
+    cursor: pointer;
+    width: 24px;
+  }
+
+
 }
 
 .menu__items {
-  display: flex;
-  flex-direction: column;
+  background-color: variables.$color-primary;
   list-style: none;
   padding: 0;
   margin: 0;
+
+  &--hide {
+    display: none;
+  }
+
+  &--show {
+    display: block;
+  }
 
   & a {
     text-decoration: none;
     color: #ffffff;
     padding: 10px 20px;
     font-weight: 700;
-    display: inline-block;
+    display: block;
+    width: 150px;
 
     &:hover {
       color: variables.$color-primary;
@@ -53,16 +77,19 @@
 }
 
 @media screen and (min-width: 640px) {
+  .menu__hamburger {
+    display: none;
+  }
+
   .menu__items {
+    display: flex;
     flex-direction: row;
     align-items: center;
-    list-style: none;
-    padding: 0;
-    margin: 0;
   
     & a {
       padding: 30px 10px;
       text-align: center;
+      width: fit-content;
      }
   }
 

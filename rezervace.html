@@ -5,35 +5,49 @@ layout: main-template.njk
   <h1 class="heading__title">Rezervujte si u nás stůl</h1>
 </div>
 
-<p>Rezervaci můžete provést buď telefonicky na telefonním čísle +420 123 456 789 
+<p class="reservation__text">Rezervaci můžete provést buď telefonicky na telefonním čísle +420 123 456 789 
   nebo prostřednictvím rezervačního formuláře níže.</p>
 
-<p>Po odeslání formuláře Vám na e-mail potvrdíme vytvoření rezervace a následně Vám rezervaci do 24h potvrdíme.</p>
+<p class="reservation__text">Po odeslání formuláře Vám na e-mail potvrdíme vytvoření rezervace a následně Vám rezervaci do 24h potvrdíme.</p>
 
 <h2>Rezervační formulář</h2>
 
-<form action="" method="post">
+<form class="form" action="" method="post">
 
-  <label for="name">Jméno</label>
-  <input type="text" name="name" id="name" placeholder="Zadejte Vaše jméno">
+  <div class="form__field">
+    <label for="name">Jméno</label>
+    <input type="text" name="name" id="name" placeholder="Zadejte Vaše jméno">
+  </div>
 
-  <label for="surname">Příjmení</label>
-  <input type="text" name="surname" id="surname" placeholder="Zadejte Vaše příjmení">
+  <div class="form__field">
+    <label for="surname">Příjmení</label>
+    <input type="text" name="surname" id="surname" placeholder="Zadejte Vaše příjmení">
+  </div>
 
-  <label for="email">E-mail</label>
-  <input type="email" name="email" id="email" placeholder="Zadejte Váš e-mail">
+  <div class="form__field">
+    <label for="email">E-mail</label>
+    <input type="email" name="email" id="email" placeholder="Zadejte Váš e-mail">
+  </div>
 
-  <label for="number">Počet osob</label>
-  <input type="number" name="number" id="number" placeholder="Zadejte počet osob">
+  <div class="form__field">
+    <label for="number">Počet osob</label>
+    <input type="number" name="number" id="number" placeholder="Zadejte počet osob">
+  </div>
 
-  <label for="date">Zvolte datum a čas</label>
-  <input type="datetime-local" name="date" id="date">
+  <div class="form__field">
+    <label for="date">Zvolte datum a čas</label>
+    <input type="datetime-local" name="date" id="date">
+  </div>
 
-  <label for="note">Poznámka</label>
-  <input type="text" name="note" id="note" placeholder="Zde můžete zadat další požadavky nebo přání">
+  <div class="form__field">
+    <label for="note">Poznámka</label>
+    <textarea name="note" id="note" rows="5" placeholder="Zde můžete zadat další požadavky nebo přání"></textarea>
+  </div>
 
-  <input type="checkbox" name="consent" id="consent">
-  <label for="consent">Souhlasím se zpracováním osobních údajů.</label>
+  <div class="form__checkbox">
+    <input type="checkbox" name="consent" id="consent">
+    <label for="consent">Souhlasím se zpracováním osobních údajů.</label>
+  </div>
 
-  <button type="submit">Odeslat</button>
+  <button type="submit" class="form__button">Odeslat</button>
 </form>

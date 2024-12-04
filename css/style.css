@@ -8,10 +8,16 @@ html {
 
 body {
   margin: 0;
-  font-family: "Lato", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 16px;
   color: #2E271A;
   background-color: #FAFAFA;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Montserrat", sans-serif;
 }
 
 .main {
@@ -325,19 +331,41 @@ body {
   background-image: url(/images/cheesecake-big.jpg);
 }
 
+.reservation {
+  display: grid;
+  grid-template-columns: 10% 80% 10%;
+}
 .reservation__text {
-  font-size: 18px;
+  grid-column: 2;
   font-weight: bold;
-  margin: 40px;
+  margin: 20px 0;
+}
+.reservation__title {
+  grid-column: 2;
+}
+.reservation__confirmation {
+  grid-column: 2;
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  box-shadow: grey 2px 2px 10px;
+}
+.reservation__confirmation img {
+  width: 50px;
 }
 
 .form {
+  grid-column: 2;
   width: 100%;
-  max-width: 300px;
+  display: grid;
+  grid-template-columns: 10% 80% 10%;
 }
 
 .form__field {
   margin-bottom: 10px;
+  grid-column: 2;
 }
 .form__field > label {
   display: block;
@@ -347,12 +375,77 @@ body {
 .form__field input[type=text], .form__field input[type=email], .form__field input[type=number], .form__field input[type=datetime-local], .form__field textarea {
   width: 100%;
   border: 1px solid #633E1A;
-  border-radius: 4px;
+  border-radius: 5px;
   font-size: 16px;
   padding: 5px;
   background-color: white;
+  color: #2E271A;
+}
+.form__field textarea {
+  font-family: "Roboto", sans-serif;
+}
+.form__field input[type=text]:focus, .form__field input[type=email]:focus, .form__field input[type=number]:focus, .form__field input[type=datetime-local]:focus, .form__field textarea:focus {
+  outline: 0;
+  border: 2px solid #633E1A;
+  background-color: #fff8de;
 }
 
+.form__checkbox,
+.form__button {
+  grid-column: 2;
+  margin-bottom: 20px;
+}
+
+.form__checkbox-button:focus,
+.form__button:focus {
+  outline-color: #633E1A;
+}
+
+.form__checkbox {
+  text-align: left;
+}
+
+.form__button {
+  background-color: #ffb300;
+  color: #2E271A;
+  padding: 10px 20px;
+  border: 0;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: bold;
+  width: -moz-fit-content;
+  width: fit-content;
+  justify-self: center;
+}
+.form__button:hover {
+  background-color: #fdc238;
+}
+
+@media screen and (min-width: 800px) {
+  .reservation {
+    grid-template-columns: 15% 70% 15%;
+  }
+  .form {
+    grid-template-columns: 45% 10% 45%;
+  }
+  .form__field {
+    grid-column: 1;
+  }
+  .form__field--date {
+    grid-column: 3;
+    grid-row: 1;
+  }
+  .form__field--note {
+    grid-column: 3;
+    grid-row: 2/4;
+  }
+  .form__checkbox {
+    grid-column: 1/-1;
+  }
+  .form__button {
+    grid-column: 2;
+  }
+}
 .heading__contact {
   background-image: url(/images/croissant-big.jpg);
 }

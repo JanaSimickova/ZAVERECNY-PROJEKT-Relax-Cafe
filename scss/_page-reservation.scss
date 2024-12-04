@@ -4,19 +4,45 @@
   background-image: url(/images/cheesecake-big.jpg);
 }
 
-.reservation__text {
-  font-size: 18px;
-  font-weight: bold;
-  margin: 40px;
+.reservation {
+  display: grid;
+  grid-template-columns: 10% 80% 10%;
+
+  &__text {
+    grid-column: 2;
+    font-weight: bold;
+    margin: 20px 0;
+  }
+
+  &__title {
+    grid-column: 2;
+  }
+
+  &__confirmation {
+    grid-column: 2;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    box-shadow: grey 2px 2px 10px;
+
+    & img {
+      width: 50px;
+    }
+  }
 }
 
 .form {
+  grid-column: 2;
   width: 100%;
-  max-width: 300px;
+  display: grid;
+  grid-template-columns: 10% 80% 10%;
 }
 
 .form__field {
   margin-bottom: 10px;
+  grid-column: 2;
   
   & > label {
     display: block;
@@ -31,9 +57,87 @@
   & textarea {
   width: 100%;
 	border: 1px solid variables.$color-primary;
-	border-radius: 4px;
+	border-radius: 5px;
 	font-size: 16px;
 	padding: 5px;
 	background-color: white;
+  color: variables.$color-text;
+  }
+
+  & textarea {
+    font-family: variables.$font-text;
+  }
+
+  & input[type="text"]:focus,
+  & input[type="email"]:focus,
+  & input[type="number"]:focus,
+  & input[type="datetime-local"]:focus,
+  & textarea:focus {
+    outline: 0;
+	  border: 2px solid variables.$color-primary;
+	  background-color: #fff8de;
   }
 }
+
+.form__checkbox,
+.form__button {
+  grid-column: 2;
+  margin-bottom: 20px;
+}
+
+.form__checkbox-button:focus,
+.form__button:focus {
+  outline-color: variables.$color-primary;
+}
+
+.form__checkbox {
+  text-align: left;
+}
+
+.form__button {
+  background-color: variables.$color-accent;
+	color: variables.$color-text;
+	padding: 10px 20px;
+	border: 0;
+	border-radius: 4px;
+  font-size: 16px;
+  font-weight: bold;
+  width: fit-content;
+  justify-self: center;
+
+  &:hover {
+    background-color: #fdc238;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .reservation {
+    grid-template-columns: 15% 70% 15%;
+  }
+  .form {
+    grid-template-columns: 45% 10% 45%;
+
+    &__field {
+      grid-column: 1;
+    }
+
+    &__field--date {
+      grid-column: 3;
+      grid-row: 1;
+    }
+
+    &__field--note {
+      grid-column: 3;
+      grid-row: 2 / 4;
+    }
+
+    &__checkbox {
+      grid-column: 1 / -1;
+    }
+
+    &__button {
+      grid-column: 2;
+    }
+  }
+}
+

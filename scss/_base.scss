@@ -11,6 +11,12 @@ body {
   background-color: #FAFAFA;
 }
 
+h1,
+h2,
+h3 {
+  font-family: variables.$font-headline;
+}
+
 .main {
   max-width: 1200px;
   text-align: center;

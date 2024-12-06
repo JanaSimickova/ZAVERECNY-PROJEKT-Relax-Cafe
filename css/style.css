@@ -20,12 +20,15 @@ h3 {
   font-family: "Montserrat", sans-serif;
 }
 
-.main {
+.wrapper {
   max-width: 1200px;
-  text-align: center;
   margin: 0 auto;
-  background-color: #fff2e4;
   box-shadow: grey 2px 2px 20px;
+}
+
+.main {
+  text-align: center;
+  background-color: #fff2e4;
 }
 
 .menu {
@@ -159,9 +162,10 @@ h3 {
 }
 
 .box {
+  width: 1005;
   height: 500px;
   margin: 50px 0;
-  background-image: url(/images/cafe-big.jpg);
+  background-image: url(/images/big/cafe-big.jpg);
   background-size: cover;
   background-attachment: fixed;
 }
@@ -251,7 +255,7 @@ h3 {
   color: white;
 }
 .heading__gallery {
-  background-image: url(/images/gallery-big.jpg);
+  background-image: url(/images/big/gallery-big.jpg);
 }
 .heading__title {
   font-size: 32px;
@@ -264,8 +268,9 @@ h3 {
   display: grid;
   gap: 1px;
 }
-.gallery__item {
+.gallery__image {
   width: 100%;
+  display: block;
 }
 
 @media screen and (min-width: 640px) {
@@ -275,7 +280,7 @@ h3 {
   .heading__title {
     font-size: 40px;
   }
-  .heading .gallery {
+  .gallery {
     grid-template-columns: 50% 50%;
     align-items: center;
   }
@@ -289,7 +294,7 @@ h3 {
   }
 }
 .heading__offer {
-  background-image: url(/images/chocolate-big.jpg);
+  background-image: url(/images/big/chocolate-big.jpg);
 }
 
 .offer {
@@ -425,6 +430,9 @@ h3 {
   .reservation {
     grid-template-columns: 15% 70% 15%;
   }
+  .reservation__confirmation {
+    margin: 0 80px 20px 80px;
+  }
   .form {
     grid-template-columns: 45% 10% 45%;
   }
@@ -446,8 +454,13 @@ h3 {
     grid-column: 2;
   }
 }
+@media screen and (min-width: 1200px) {
+  .reservation__confirmation {
+    margin: 0 160px 20px 160px;
+  }
+}
 .heading__contact {
-  background-image: url(/images/croissant-big.jpg);
+  background-image: url(/images/big/croissant-big.jpg);
 }
 
 .contact {
@@ -538,9 +551,7 @@ h3 {
 }
 @media screen and (min-width: 1200px) {
   .footer {
-    max-width: 1200px;
     margin: 0 auto;
-    box-shadow: grey 2px 2px 20px;
   }
   .footer__image {
     width: 2.5em;

@@ -7,7 +7,7 @@
   color: white;
   
   &__gallery {
-  background-image: url(/images/gallery-big.jpg);
+  background-image: url(/images/big/gallery-big.jpg);
   }
 
   &__title {
@@ -22,8 +22,9 @@
   display: grid;
   gap: 1px;
   
-  &__item {
+  &__image {
     width: 100%;
+    display: block;
   }
 }
 
@@ -34,10 +35,11 @@
     &__title {
     font-size: 40px;
   }
+  }
+
   .gallery {
     grid-template-columns: 50% 50%;
     align-items: center;
-  }
   }
 }
 

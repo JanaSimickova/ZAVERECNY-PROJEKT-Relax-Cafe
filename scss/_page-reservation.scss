@@ -113,6 +113,10 @@
 @media screen and (min-width: 800px) {
   .reservation {
     grid-template-columns: 15% 70% 15%;
+
+    &__confirmation {
+      margin: 0 80px 20px 80px;
+    }
   }
   .form {
     grid-template-columns: 45% 10% 45%;
@@ -141,3 +145,8 @@
   }
 }
 
+@media screen and (min-width: 1200px) {
+  .reservation__confirmation {
+    margin: 0 160px 20px 160px;
+  }
+}

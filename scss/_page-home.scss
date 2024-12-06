@@ -4,11 +4,6 @@
   &--main {
     margin-top: 72px;
   }
-
-  // &--cafe {
-  //   position: fixed;
-  //   left: 0;
-  // }
 }
 
 .section {
@@ -24,9 +19,10 @@
 }
 
 .box {
+  width: 1005;
   height: 500px;
 	margin: 50px 0;
-	background-image: url(/images/cafe-big.jpg);
+	background-image: url(/images/big/cafe-big.jpg);
 	background-size: cover;
 	background-attachment: fixed;
 }
@@ -122,10 +118,4 @@
       margin: 0 200px;
     }
   }
-
-  // .photo__image--cafe {
-  //   position: fixed;
-  //   max-width: 1200px;
-  //   left: calc((100% - 1200px) / 2);
-  // }
 }

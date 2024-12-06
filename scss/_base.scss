@@ -17,11 +17,14 @@ h3 {
   font-family: variables.$font-headline;
 }
 
-.main {
+.wrapper {
   max-width: 1200px;
-  text-align: center;
   margin: 0 auto;
-  background-color: variables.$color-secondary;
   box-shadow: grey 2px 2px 20px;
+}
+
+.main {
+  text-align: center;
+  background-color: variables.$color-secondary;
 }
 

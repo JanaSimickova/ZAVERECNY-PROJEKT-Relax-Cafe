@@ -22,10 +22,20 @@
   padding: 20px;
   display: grid;
   gap: 1px;
-  
+
+  &__item {
+    position: relative;
+    overflow: hidden;
+  }
+    
   &__image {
     width: 100%;
     display: block;
+    transition: transform 0.5s;
+
+    &:hover {
+      transform: scale(1.1);
+  }
   }
 }
 
@@ -50,5 +60,6 @@
   }
   .gallery {
     grid-template-columns: repeat(3, calc(100% / 3));
+    padding: 40px;
   }
 }

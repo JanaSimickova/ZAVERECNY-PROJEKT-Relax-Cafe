@@ -165,7 +165,7 @@ h3 {
 }
 
 .box {
-  width: 1005;
+  width: 100%;
   height: 500px;
   margin: 0;
   background-image: url(/images/big/cafe-big.jpg);
@@ -286,9 +286,17 @@ h3 {
   display: grid;
   gap: 1px;
 }
+.gallery__item {
+  position: relative;
+  overflow: hidden;
+}
 .gallery__image {
   width: 100%;
   display: block;
+  transition: transform 0.5s;
+}
+.gallery__image:hover {
+  transform: scale(1.1);
 }
 
 @media screen and (min-width: 640px) {
@@ -309,6 +317,7 @@ h3 {
   }
   .gallery {
     grid-template-columns: repeat(3, 33.3333333333%);
+    padding: 40px;
   }
 }
 .heading__offer {
@@ -325,6 +334,9 @@ h3 {
 .offer__title {
   margin: 0 0 20px 0;
   text-align: center;
+  color: white;
+  background-color: #633E1A;
+  padding: 5px;
 }
 .offer__table {
   display: grid;
@@ -345,9 +357,9 @@ h3 {
     padding: 40px 120px;
   }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1000px) {
   .offer {
-    padding: 40px 300px;
+    padding: 40px 250px;
   }
 }
 .heading__reservation {
@@ -357,14 +369,19 @@ h3 {
 .reservation {
   display: grid;
   grid-template-columns: 10% 80% 10%;
+  padding: 20px 0;
 }
 .reservation__text {
   grid-column: 2;
   font-weight: bold;
-  margin: 20px 0;
+  margin: 0;
+}
+.reservation__text:first-child {
+  margin-bottom: 20px;
 }
 .reservation__title {
   grid-column: 2;
+  margin: 20px 0;
 }
 .reservation__confirmation {
   grid-column: 2;
@@ -416,7 +433,6 @@ h3 {
 .form__checkbox,
 .form__button {
   grid-column: 2;
-  margin-bottom: 20px;
 }
 
 .form__checkbox-button:focus,
@@ -426,6 +442,7 @@ h3 {
 
 .form__checkbox {
   text-align: left;
+  margin-bottom: 10px;
 }
 
 .form__button {
@@ -439,6 +456,7 @@ h3 {
   width: -moz-fit-content;
   width: fit-content;
   justify-self: center;
+  margin-bottom: 0;
 }
 .form__button:hover {
   background-color: #fdc238;
@@ -473,6 +491,12 @@ h3 {
   }
 }
 @media screen and (min-width: 1200px) {
+  .reservation {
+    padding: 40px 0;
+  }
+  .reservation__title {
+    margin: 40px 0;
+  }
   .reservation__confirmation {
     margin: 0 160px 20px 160px;
   }
@@ -491,6 +515,9 @@ h3 {
 .contact__title {
   text-align: left;
   margin: 20px 0;
+}
+.contact__title--map {
+  text-align: center;
 }
 .contact__item {
   display: flex;
@@ -535,6 +562,12 @@ h3 {
 @media screen and (min-width: 1200px) {
   .contact {
     grid-template-columns: 15% 25% 20% 25% 15%;
+  }
+  .contact__title {
+    margin: 40px 0 20px 0;
+  }
+  .contact__title--map {
+    margin: 40px 0;
   }
 }
 .footer {

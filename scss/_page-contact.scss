@@ -16,7 +16,12 @@
   &__title {
     text-align: left;
     margin: 20px 0;
+
+    &--map {
+      text-align: center;
+    }
   }
+
   &__item {
     display: flex;
   }
@@ -62,11 +67,6 @@
       text-align: center;
     }
 
-    // &__item {
-    //   margin: 0 auto;
-    //   width: 75%;
-    // }
-
     &__image {
       width: 40px;
     }
@@ -76,5 +76,13 @@
 @media screen and (min-width: 1200px) {
   .contact {
     grid-template-columns: 15% 25% 20% 25% 15%;
+
+    &__title {
+      margin: 40px 0 20px 0;
+  
+      &--map {
+        margin: 40px 0;
+      }
+    }
   }
 }

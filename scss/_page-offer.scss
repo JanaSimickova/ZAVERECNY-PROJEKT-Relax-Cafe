@@ -14,6 +14,9 @@
   &__title {
     margin: 0 0 20px 0;
     text-align: center;
+    color: white;
+    background-color: variables.$color-primary;
+    padding: 5px;
   }
 
   &__table {
@@ -38,8 +41,8 @@
     padding: 40px 120px;
   }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1000px) {
   .offer {
-    padding: 40px 300px;
+    padding: 40px 250px;
   }
 }

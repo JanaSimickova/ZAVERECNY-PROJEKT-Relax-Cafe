@@ -32,6 +32,7 @@
 	background-image: url(/images/big/cafe-big.jpg);
 	background-size: cover;
 	background-attachment: fixed;
+  background-position: center;
 }
 
 .cards {
@@ -72,7 +73,7 @@
   }
 }
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 640px) {
   .photo__image--main {
     margin-top: 79px;
   }
@@ -94,11 +95,18 @@
       height: 200px;
       object-fit: cover;
       border-radius: 10px 0 0 10px;
+      overflow: hidden;
     }
 
     &__text {
       flex-basis: 50%;
     }
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .card__image {
+    height: 250px;
   }
 }
 

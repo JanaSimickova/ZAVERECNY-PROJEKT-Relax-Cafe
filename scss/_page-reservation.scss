@@ -1,7 +1,7 @@
 @use "variables";
 
 .heading__reservation {
-  background-image: url(/images/cheesecake-big.jpg);
+  background-image: url(/images/big/cheesecake-big.jpg);
 }
 
 .reservation {
@@ -68,10 +68,7 @@
 	padding: 5px;
 	background-color: white;
   color: variables.$color-text;
-  }
-
-  & textarea {
-    font-family: variables.$font-text;
+  font-family: variables.$font-text;
   }
 
   & input[type="text"]:focus,

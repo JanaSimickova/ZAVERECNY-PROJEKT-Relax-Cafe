@@ -23,7 +23,7 @@ h3 {
 .wrapper {
   max-width: 1200px;
   margin: 0 auto;
-  box-shadow: grey 2px 2px 20px;
+  box-shadow: 2px 2px 20px grey;
 }
 
 .main {
@@ -42,6 +42,7 @@ h3 {
   margin: 0 auto;
   position: fixed;
   z-index: 1;
+  top: 0;
 }
 .menu__nav {
   display: flex;
@@ -171,6 +172,7 @@ h3 {
   background-image: url(/images/big/cafe-big.jpg);
   background-size: cover;
   background-attachment: fixed;
+  background-position: center;
 }
 
 .cards {
@@ -206,7 +208,7 @@ h3 {
   margin: 0;
 }
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 640px) {
   .photo__image--main {
     margin-top: 79px;
   }
@@ -226,9 +228,15 @@ h3 {
     -o-object-fit: cover;
        object-fit: cover;
     border-radius: 10px 0 0 10px;
+    overflow: hidden;
   }
   .card__text {
     flex-basis: 50%;
+  }
+}
+@media screen and (min-width: 900px) {
+  .card__image {
+    height: 250px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -272,6 +280,7 @@ h3 {
   flex-direction: column;
   justify-content: center;
   color: white;
+  background-position: center;
 }
 .heading__gallery {
   background-image: url(/images/big/gallery-big.jpg);
@@ -312,6 +321,9 @@ h3 {
   }
 }
 @media screen and (min-width: 1200px) {
+  .heading {
+    margin-top: 100px;
+  }
   .heading__title {
     font-size: 50px;
   }
@@ -363,7 +375,7 @@ h3 {
   }
 }
 .heading__reservation {
-  background-image: url(/images/cheesecake-big.jpg);
+  background-image: url(/images/big/cheesecake-big.jpg);
 }
 
 .reservation {
@@ -420,8 +432,6 @@ h3 {
   padding: 5px;
   background-color: white;
   color: #2E271A;
-}
-.form__field textarea {
   font-family: "Roboto", sans-serif;
 }
 .form__field input[type=text]:focus, .form__field input[type=email]:focus, .form__field input[type=number]:focus, .form__field input[type=datetime-local]:focus, .form__field textarea:focus {
@@ -574,18 +584,18 @@ h3 {
   background-color: #633E1A;
   color: white;
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
   align-items: center;
   padding: 20px;
 }
 
 .footer__image {
   width: 2em;
-  margin-right: 10px;
+  margin: 0 10px 20px 0;
 }
 
 .footer__address {
-  margin: 0 0 20px 0;
+  margin: 0;
   font-weight: 700;
 }
 
@@ -594,24 +604,26 @@ h3 {
     flex-direction: row;
     justify-content: space-between;
   }
+  .footer__image {
+    margin: 0 10px 0 0;
+    flex-basis: 50%;
+  }
   .footer__address {
     margin: 0;
     font-weight: 700;
-    font-size: 18px;
+    flex-basis: 50%;
+    text-align: right;
   }
 }
 @media screen and (min-width: 1200px) {
   .footer {
     margin: 0 auto;
+    padding: 20px 40px;
   }
   .footer__image {
     width: 2.5em;
   }
-  .footer__fb {
-    margin-left: 20px;
-  }
   .footer__address {
-    margin-right: 20px;
-    font-size: 24px;
+    font-size: 18px;
   }
 }/*# sourceMappingURL=style.css.map */
